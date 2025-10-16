@@ -3,7 +3,7 @@
              x:Class="TreeDataGridDemo.App">
   <Application.Styles>
     <FluentTheme/>
-    <StyleInclude Source="avares://Avalonia.Controls.TreeDataGrid/Themes/Fluent.axaml"/>
+    <StyleInclude Source="avares://Beardmouse.Avalonia.Controls.TreeDataGrid/Themes/Fluent.axaml"/>
   </Application.Styles>
   <!-- Uncomment to override resources -->
   <!-- <Application.Resources> -->
