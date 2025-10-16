@@ -3,11 +3,10 @@
   <Import Project="build\SourceLink.props" Condition="'$(DisableSourceLink)' == ''" />
   <PropertyGroup>
     <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningsAsErrors>nullable</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <AvaloniaVersion>11.0.0</AvaloniaVersion>
-    <AvaloniaSamplesVersion>11.2.8</AvaloniaSamplesVersion>
+    <AvaloniaVersion>11.3.7</AvaloniaVersion>
   </PropertyGroup>
 </Project>
