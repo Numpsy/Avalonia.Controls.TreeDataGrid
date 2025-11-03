@@ -7,6 +7,6 @@
     <WarningsAsErrors>nullable</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <AvaloniaVersion>11.3.7</AvaloniaVersion>
+    <AvaloniaVersion>11.3.8</AvaloniaVersion>
   </PropertyGroup>
 </Project>
