@@ -96,12 +96,14 @@ namespace Avalonia.Controls
             AddHandler(KeyDownEvent, OnPreviewKeyDown, RoutingStrategies.Tunnel);
         }
 
+#if false
         static TreeDataGrid()
         {
             DragDrop.DragOverEvent.AddClassHandler<TreeDataGrid>((x, e) => x.OnDragOver(e));
             DragDrop.DragLeaveEvent.AddClassHandler<TreeDataGrid>((x, e) => x.OnDragLeave(e));
             DragDrop.DropEvent.AddClassHandler<TreeDataGrid>((x, e) => x.OnDrop(e));
         }
+#endif
 
         public bool AutoDragDropRows
         {
@@ -466,7 +468,8 @@ namespace Avalonia.Controls
                 RaiseEvent(e);
                 allowedEffects = e.AllowedEffects;
             }
-
+            
+#if false
             if (allowedEffects != DragDropEffects.None)
             {
                 var data = new DataObject();
@@ -474,6 +477,7 @@ namespace Avalonia.Controls
                 data.Set(DragInfo.DataFormat, info);
                 DragDrop.DoDragDrop(trigger, data, allowedEffects);
             }
+#endif
         }
 
         private void OnClick(object? sender, RoutedEventArgs e)
@@ -605,6 +609,7 @@ namespace Avalonia.Controls
             _autoScrollTimer.Start();
         }
 
+#if false
         [MemberNotNullWhen(true, nameof(_source))]
         private bool CalculateAutoDragDrop(
             TreeDataGridRow? targetRow,
@@ -716,6 +721,7 @@ namespace Avalonia.Controls
                 _source.DragDropRows(_source, data!.Indexes, targetIndex, position, e.DragEffects);
             }
         }
+#endif
 
         private void OnScrollChanged(object? sender, ScrollChangedEventArgs e)
         {

@@ -401,7 +401,8 @@ namespace Avalonia.Controls.TreeDataGridTests
 
             source.Columns.Add(movedColumn);
 
-            var root = (TestWindow)target.GetVisualRoot()!;
+            var root = TopLevel.GetTopLevel(target) as TestWindow; //  target.GetVisualRoot()!;
+            Assert.NotNull(root);
             root.UpdateLayout();
             Dispatcher.UIThread.RunJobs();
 
